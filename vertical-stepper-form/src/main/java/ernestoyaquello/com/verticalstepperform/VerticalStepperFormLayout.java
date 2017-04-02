@@ -35,6 +35,7 @@ import java.util.List;
 
 import ernestoyaquello.com.verticalstepperform.interfaces.VerticalStepperForm;
 import ernestoyaquello.com.verticalstepperform.utils.Animations;
+import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 
 /**
  * Custom layout that implements a vertical stepper form
@@ -658,9 +659,9 @@ public class VerticalStepperFormLayout extends RelativeLayout implements View.On
             }
         });
 
-        AppCompatButton nextButton = (AppCompatButton) stepLayout.findViewById(R.id.next_step);
-        setButtonColor(nextButton,
-                buttonBackgroundColor, buttonTextColor, buttonPressedBackgroundColor, buttonPressedTextColor);
+        FloatingTextButton nextButton = (FloatingTextButton) stepLayout.findViewById(R.id.next_step);
+        nextButton.setBackgroundColor(buttonBackgroundColor);
+        nextButton.setTitleColor(buttonTextColor);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
